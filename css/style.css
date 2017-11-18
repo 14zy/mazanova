@@ -206,7 +206,8 @@ li.nav-item .btn-white {
   color: #46484a; }
 
 .cover-1 {
-  background: #2b2d34 url(../images/bg.jpg) center;
+
+  background: #2b2d34 url(../images/bg2.gif) center;
   background-size: cover;
   min-height: 40rem;
   height: auto;
