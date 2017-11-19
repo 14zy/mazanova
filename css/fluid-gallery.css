@@ -51,7 +51,7 @@
     color: #fff;
     font-size: 26px;
     font-family: 'Glyphicons Halflings';
-    /*content: '💜';*/
+    content: '🔍';
     pointer-events: none;
     z-index: 9000;
     transition: 0.4s;

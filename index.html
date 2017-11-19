@@ -27,10 +27,10 @@
 	<div id="app">
 
 		<section class="cover-1 text-center">
-			<div class="cover-container pb-5">
+			<div class="cover-container pt-5 pb-5">
 				<div class="cover-inner container">
-					<h1 class="jubotron-heading" style="color: ; font-family:sarina,cursive;">Maria Mazanova</h1>
-					<p class="lead" style="color: ">Fashion Designer</p>
+					<h1 class="jubotron-heading" style="font-family:sarina,cursive;">Maria Mazanova</h1>
+					<p class="lead">Fashion Designer</p>
 					<br><br><br><br>
 					<p>
 						<a href="#" class="ml-2 btn btn-outline-white btn-lg">Send message</a>
@@ -46,63 +46,131 @@
 			</div>
 		</section>
 
-		<section>
-			<div class="container">
-				<div class="row justify-center">
-					<div class="col-md-6 text-center text-md-left">
-						<h3 class="mb-4 mt-4">Vintage Palace</h3>
-						<h6><a class="text-primary" target="_blank"  href="http://vintagepalace.uk"><i class="fa fa-globe"></i>&nbsp;vintagepalace.uk</a>, <a class="text-primary" target="_blank" href="http://instagram.com/vintagepalace.shop"><i class="fa fa-instagram"></i>&nbsp;vintagepalace.shop</a></h6>
-						<p>Design of all clothes and accessories, content for social media, brand identity.</p>
+		<work-section
+			:name="'vintage-palace'"
+			:title="'Vintage Palace'"
+			:description="'Design of all clothes and accessories, content for social media, brand identity.'"
+			:btn-title="'show more'"
+			:link="'http://vintagepalace.uk'"
+			:link-title="'vintagepalace.uk'"
+			:instagram="'vintagepalace.shop'"
+			:works="'21'"
+		></work-section>
 
-					</div>
+		<work-section
+			:name="'cat-paw'"
+			:title="'Cat Paw'"
+			:description="'Collection of internet cats designed for pillowcases.'"
+			:btn-title="'show more pillows'"
+			:link="'https://www.redbubble.com/people/mazanova/shop/throw-pillows?accordion=product&cat_context=u-decor&ref=artist_shop_product_refinement&asc=u'"
+			:link-title="'redbubble.com'"
+			:works="'13'"
+		></work-section>
 
-					<div class="col-md-6 text-center">
-						<img class="mb-4 img-fluid" src="images/vintagepalace/logo.jpg">
-						<p><a class="btn btn-outline-secondary" href="" data-toggle="modal" data-target=".bd-example-modal-lg">show more</a></p>
-					</div>
+		<work-section
+			:name="'asian-fish'"
+			:title="'Asian Fish'"
+			:description="'Capsule collection inspored by asia'"
+			:btn-title="'show more'"
+			:link="'http://like-shop.ru'"
+			:link-title="'like-shop.ru'"
+			:works="'10'"
+		></work-section>
 
-				</div>
+		<work-section
+			:name="'smart-is-cool'"
+			:title="'Smart is Cool'"
+			:description="'Capsule collection for young women'"
+			:btn-title="'open it, smarty!'"
+			:link="'http://like-shop.ru'"
+			:link-title="'like-shop.ru'"
+			:works="'26'"
+		></work-section>
 
-				<div class="tz-gallery">
-					<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-						<div class="modal-dialog modal-lg">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title">Vintage Palace</h5>
-									<button style="cursor:pointer;" type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body">
-									<vintage-list></vintage-list>
-								</div>
-								<div class="modal-footer">
-									<a target="_blank" href="http://vintagepalace.uk"  class="btn btn-primary">Visit store</a>
-									<button style="cursor:pointer;" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+		<work-section
+			:name="'neon-geisha'"
+			:title="'Neon Geisha'"
+			:description="'Capsule collection for young women'"
+			:btn-title="'show more'"
+			:link="'http://like-shop.ru'"
+			:link-title="'like-shop.ru'"
+			:works="'9'"
+		></work-section>
 
-		<section class="content-2">
-			<div class="container">
-				<div class="row justify-center">
-					<div class="col-md-6 text-center text-md-left">
-						<h3 class="mb-4 mt-4">Cat Paw</h3>
-						<p class="mb-4">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-						<p><a class="btn btn-outline-secondary" href="#" role="button">Open Pillows</a></p>
-					</div>
-					<div class="col-md-6 text-center">
-						<img class="mb-4 img-fluid" src="images/catpaw/logo.jpg">
-					</div>
-				</div>
-			</div>
-		</section>
+		<work-section
+			:name="'corgi-love'"
+			:title="'Corgi Love'"
+			:description="'Capsule collection for young women'"
+			:btn-title="'arrr, open collection'"
+			:link="'http://like-shop.ru'"
+			:link-title="'like-shop.ru'"
+			:works="'10'"
+		></work-section>
 
-		<section class="cover-2 text-left">
+		<work-section
+			:name="'cactus-pot'"
+			:title="'Cactus Pot'"
+			:description="'Capsule collection for young women'"
+			:btn-title="'show more'"
+			:link="'http://like-shop.ru'"
+			:link-title="'like-shop.ru'"
+			:works="'5'"
+		></work-section>
+
+		<work-section
+			:name="'mushroom-day'"
+			:title="'Mushroom Day'"
+			:description="'Capsule collection inspired by Alice in Winderland'"
+			:btn-title="'eat more mushrooms'"
+			:link="'http://like-shop.ru'"
+			:link-title="'like-shop.ru'"
+			:works="'13'"
+		></work-section>
+
+		<work-section
+			:name="'tee-time'"
+			:title="'Tee Time'"
+			:description="'Capsule collection for young women'"
+			:btn-title="'Dino! Dino!'"
+			:link="'http://like-shop.ru'"
+			:link-title="'like-shop.ru'"
+			:works="'16'"
+		></work-section>
+
+		<work-section
+			:name="'swan-princess'"
+			:title="'Swan Princess'"
+			:description="'Holiday capsule collection for young girls'"
+			:btn-title="'show more'"
+			:link="'http://like-shop.ru'"
+			:link-title="'like-shop.ru'"
+			:works="'22'"
+		></work-section>
+
+		<work-section
+			:name="'ice-bear'"
+			:title="'Ice Bear'"
+			:description="'Capsule collection for young women'"
+			:btn-title="'show more'"
+			:link="'http://like-shop.ru'"
+			:link-title="'like-shop.ru'"
+			:works="'9'"
+		></work-section>
+
+		<work-section
+			:name="'pigeons'"
+			:title="'Pigeons'"
+			:description="'Capsule collection with bandits pigeons'"
+			:btn-title="'open pigeons'"
+			:link="'http://like-shop.ru'"
+			:link-title="'like-shop.ru'"
+			:works="'12'"
+		></work-section>
+
+		<!-- Noire -->
+
+
+		<!-- <section class="cover-2 text-left">
 			<nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
 				<div class="container">
 					<a class="navbar-brand" href="#">Navbar</a>
@@ -112,16 +180,16 @@
 					<div class="collapse navbar-collapse pull-xs-right justify-content-end" id="navbarSupportedContent">
 						<ul class="navbar-nav mt-2 mt-md-0">
 							<li class="nav-item active">
-								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+								<a class="nav-link">Home <span class="sr-only">(current)</span></a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">About</a>
+								<a class="nav-link">About</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Our Work</a>
+								<a class="nav-link">Our Work</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Contact</a>
+								<a class="nav-link">Contact</a>
 							</li>
 							<li class="nav-item">
 								<a class="btn btn-success pill-btn" href="#">Buy Now</a>
@@ -148,125 +216,6 @@
 				</div>
 			</div>
 		</section>
-
-		<section class="cover-5 text-center">
-			<nav class="navbar navbar-expand-lg navbar-light navbar-custom">
-				<div class="container">
-					<a class="navbar-brand" href="#">Navbar</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse pull-xs-right justify-content-end" id="navbarSupportedContent">
-						<ul class="navbar-nav mt-2 mt-md-0">
-							<li class="nav-item active">
-								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">About</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Our Work</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Contact</a>
-							</li>
-							<li class="nav-item">
-								<a class="btn btn-outline-success btn-outline" href="#">Buy Now</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-			<div class="cover-container pb-5 ">
-				<div class="cover-inner container">
-					<p class="lead ">A collection of coded HTML and CSS elements</p>
-					<div class="divider"></div>
-					<h1 class="jumbotron-heading">Say <em>hello</em> to our	<strong>Startup UI Kit</strong></h1>
-					<div class="row">
-						<div class="m-auto col-md-4 mt-5">
-							<button type="submit" class="btn btn-lg btn-success pill-btn mt-5">Get Started</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="features-1 text-center">
-			<div class="container">
-				<h2>Features</h2>
-				<div class="divider"></div>
-				<div class="row">
-					<div class="col-md-4 col-feature">
-						<div class="rounded-circle justify-center">
-							<em class="fa fa-2x fa-paint-brush"></em>
-						</div>
-						<h4>Clean Design</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus erat sed sem sagittis cursus.</p>
-						<p><a class="btn btn-outline-primary mt-2" href="#" role="button">View details</a></p>
-					</div>
-					<div class="col-md-4 col-feature">
-						<div class="rounded-circle justify-center">
-							<em class="fa fa-2x fa-desktop"></em>
-						</div>
-						<h4>Responsive</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus erat sed sem sagittis cursus.</p>
-						<p><a class="btn btn-outline-primary mt-2" href="#" role="button">View details</a></p>
-					</div>
-					<div class="col-md-4 col-feature">
-						<div class="rounded-circle justify-center">
-							<em class="fa fa-2x fa-code"></em>
-						</div>
-						<h4>Bootstrap 4</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus erat sed sem sagittis cursus.</p>
-						<p><a class="btn btn-outline-primary mt-2" href="#" role="button">View details</a></p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="features-4 text-center">
-			<div class="container">
-				<div class="row justify-center">
-					<div class="col-md-8 text-center">
-						<h2>Features</h2>
-						<p class="lead mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus erat sed sem sagittis cursus.</p>
-						<div class="divider"></div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-3 col-feature">
-						<div class="rounded-circle justify-center">
-							<em class="fa fa-2x fa-paint-brush"></em>
-						</div>
-						<h4>Clean Design</h4>
-						<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
-					</div>
-					<div class="col-md-3 col-feature">
-						<div class="rounded-circle justify-center">
-							<em class="fa fa-2x fa-mobile"></em>
-						</div>
-						<h4>Responsive</h4>
-						<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
-					</div>
-					<div class="col-md-3 col-feature">
-						<div class="rounded-circle justify-center">
-							<em class="fa fa-2x fa-code"></em>
-						</div>
-						<h4>Bootstrap 4</h4>
-						<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
-					</div>
-					<div class="col-md-3 col-feature">
-						<div class="rounded-circle justify-center">
-							<em class="fa fa-2x fa-pencil"></em>
-						</div>
-						<h4>Easy to Edit</h4>
-						<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-
 
 		<section class="content-4">
 			<div class="container">
@@ -345,54 +294,7 @@
 			</div>
 		</section>
 
-		<section class="contact-1">
-			<div id="map"></div>
-			<script src="js/maps.js"></script>
-			<!--YOU MUST REPLACE WITH YOUR OWN API KEY FOR THE MAP TO WORK-->
-			<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBptaDKT_ntSoNEytCnSang5JenaNAj_Us&callback=initMap">
-			</script>
-			<div class="container">
-				<div class="row contact-details">
-					<div class="col-sm-8 text-center text-md-left mb-4">
-						<h3>Ask us a question</h3>
-						<form class="contact-form mt-4">
-							<div class="row">
-								<div class="col-md-5">
-									<input type="text" class="form-control-custom mb-4" placeholder="Name" value="Your name">
-								</div>
-								<div class="col-md-5">
-									<input type="text" class="form-control-custom mb-4" placeholder="Email address" value="Email address">
-								</div>
-								<br />
-							</div>
-							<div class="row">
-								<div class="col-md-10">
-									<textarea class="form-control-custom mb-4" rows="3">Your Message</textarea><br />
-									<button type="submit" class="btn btn-primary btn-lg mb-4">Send Message</button>
-								</div>
-							</div>
-						</form>
-					</div>
-					<div class="col-sm-4 text-center text-md-left">
-						<h3>Contact</h3>
-						<h4 class="pt-4">Email</h4>
-						<p>hello@startup.co</p>
-						<h4 class="pt-2">Phone</h4>
-						<p>+111 234 567 89</p>
-						<h4 class="pt-2">Address</h4>
-						<p>1 Street Name, City, Zip Code<br /> United States</p>
-						<ul class="social">
-							<li><a href="#" title="Facebook" class="fa fa-facebook"></a></li>
-							<li><a href="#" title="Twitter" class="fa fa-twitter"></a></li>
-							<li><a href="#" title="Google+" class="fa fa-google"></a></li>
-							<li><a href="#" title="Dribbble" class="fa fa-dribbble"></a></li>
-							<li><a href="#" title="Instagram" class="fa fa-instagram"></a></li>
-							<div class="clear"></div>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
+
 
 		<section class="contact-2">
 			<div class="container">
@@ -434,16 +336,16 @@
 					<div class="col-md-8">
 						<ul class="nav-footer mt-2 mt-md-0 ">
 							<li class="nav-item active">
-								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+								<a class="nav-link">Home <span class="sr-only">(current)</span></a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">About</a>
+								<a class="nav-link">About</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Our Work</a>
+								<a class="nav-link">Our Work</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Contact</a>
+								<a class="nav-link">Contact</a>
 							</li>
 						</ul>
 					</div>
@@ -457,16 +359,16 @@
 					<div class="col-md-12">
 						<ul class="nav-footer mt-2 mt-md-0 ">
 							<li class="nav-item active">
-								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+								<a class="nav-link">Home <span class="sr-only">(current)</span></a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">About</a>
+								<a class="nav-link">About</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Our Work</a>
+								<a class="nav-link">Our Work</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Contact</a>
+								<a class="nav-link">Contact</a>
 							</li>
 						</ul>
 					</div>
@@ -492,62 +394,62 @@
 					</div>
 				</div>
 			</div>
-		</footer>
+		</footer> -->
 
 		<footer class="footer-4">
 			<div class="container">
 				<div class="row mb-5 text-center text-md-left">
 					<div class="col-md-3 col-lg-4 mb-3">
-						<a class="logo" href="#">Startup UI Kit</a>
+						<a class="logo" href="#">What i can do for your company</a>
 					</div>
 					<div class="col-md-3 offset-lg-2 col-lg-2 pt-2">
-						<h5>Category 1</h5>
+						<h5>Digital goods</h5>
 						<ul class="nav-footer">
 							<li class="nav-item">
-								<a class="nav-link" href="#">Home</a>
+								<a class="nav-link">Illustrations</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">About</a>
+								<a class="nav-link">Prints</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Our Work</a>
+								<a class="nav-link">Patterns</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Contact</a>
+								<a class="nav-link">Images</a>
 							</li>
 						</ul>
 					</div>
 					<div class="col-md-3 col-lg-2 pt-2">
-						<h5>Category 2</h5>
+						<h5>Apparel</h5>
 						<ul class="nav-footer">
 							<li class="nav-item">
-								<a class="nav-link" href="#">Home</a>
+								<a class="nav-link">Trends analytics</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">About</a>
+								<a class="nav-link">Prototyping</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Our Work</a>
+								<a class="nav-link">Manufacture</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Contact</a>
+								<a class="nav-link">Recasting</a>
 							</li>
 						</ul>
 					</div>
 					<div class="col-md-3 col-lg-2 pt-2">
-						<h5>Category 3</h5>
+						<h5>Branding</h5>
 						<ul class="nav-footer">
 							<li class="nav-item">
-								<a class="nav-link" href="#">Home</a>
+								<a class="nav-link">Logo</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">About</a>
+								<a class="nav-link">Company identics</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Our Work</a>
+								<a class="nav-link">Social Media
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Contact</a>
+								<a class="nav-link">Corporate posters</a>
 							</li>
 						</ul>
 					</div>
@@ -559,15 +461,18 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 text-center text-md-left mt-2 mb-3 pt-1">
-						<p class="copyright">Copyright &copy; YourStartup. All rights reserved.</p>
+						<p class="copyright">Thank you for reading! Feel free to message me with one of this services</p>
 					</div>
 					<div class="col-md-6 text-center text-md-right mb-4">
 						<ul class="social">
-							<li><a href="#" title="Facebook" class="fa fa-facebook"></a></li>
-							<li><a href="#" title="Twitter" class="fa fa-twitter"></a></li>
-							<li><a href="#" title="Google+" class="fa fa-google"></a></li>
-							<li><a href="#" title="Dribbble" class="fa fa-dribbble"></a></li>
+							<li><a href="#" title="Instagram" class="fa fa-telegram"></a></li>
+							<li><a href="#" title="Instagram" class="fa fa-pinterest"></a></li>
 							<li><a href="#" title="Instagram" class="fa fa-instagram"></a></li>
+
+							<li><a href="#" title="Facebook" class="fa fa-facebook"></a></li>
+							<li><a href="#" title="Instagram" class="fa fa-behance"></a></li>
+							<!-- <li><a href="#" title="Twitter" class="fa fa-vk"></a></li> -->
+
 							<div class="clear"></div>
 						</ul>
 					</div>
