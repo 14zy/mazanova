@@ -23,7 +23,7 @@ Vue.component('work-section', {
           <p>{{description}}</p>
           <p><a class="btn btn-outline-secondary" href="" data-toggle="modal" :data-target="'#modal-'+name">{{btnTitle}}</a></p>
           <h5>
-          <a class="btn text-primary" target="_blank"  :href="link">
+          <a v-if="link" class="btn text-primary" target="_blank"  :href="link">
             <i class="fa fa-globe"></i>&nbsp;{{linkTitle}}
           </a>
           <br>
@@ -48,7 +48,7 @@ Vue.component('work-section', {
                 <work-list :name="name" :works="works"></work-list>
               </div>
               <div class="modal-footer">
-                <a target="_blank" :href="link" class="btn btn-primary">Visit store</a>
+                <a v-if="link" target="_blank" :href="link" class="btn btn-primary">Visit store</a>
                 <button style="cursor:pointer;" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               </div>
             </div>
