@@ -7,14 +7,14 @@ Vue.component('paintings-list', {
   data: function () {
     return {
               paintings: {
-                1: {name: "Rose", price: "40", sold: true},
-                2: {name: "Letter", price: "40", sold: true},
-                3: {name: "Bath", price: "40", sold: true},
-                4: {name: "Water", price: "40", sold: true},
-                5: {name: "Coctail", price: "40", sold: true},
-                6: {name: "First Steps", price: "40", sold: true},
-                7: {name: "Show", price: "40", sold: true},
-                8: {name: "Morning", price: "40", sold: true}
+                1: {name: "Rose", price: "59", sold: true},
+                2: {name: "Letter", price: "59", sold: true},
+                3: {name: "Bath", price: "59", sold: true},
+                4: {name: "Water", price: "59", sold: true},
+                5: {name: "Coctail", price: "59", sold: true},
+                6: {name: "First Steps", price: "59", sold: true},
+                7: {name: "Show", price: "59", sold: true},
+                8: {name: "Morning", price: "59", sold: true}
               }
             }
   },
