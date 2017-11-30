@@ -1,3 +1,54 @@
+Vue.component('paintings-list', {
+  template: `
+  <div class="row p-4">
+    <painting v-for="image in total_paintings" :id="image" :name="paintings[image].name" :price="paintings[image].price" :sold="paintings[image].sold" :url="'images/la-vie-en-rose/'+image+'.jpg'"></painting>
+  </div>
+  `,
+  data: function () {
+    return {
+              paintings: {
+                1: {name: "Rose", price: "40", sold: true},
+                2: {name: "Letter", price: "40", sold: true},
+                3: {name: "Bath", price: "40", sold: true},
+                4: {name: "Water", price: "40", sold: true},
+                5: {name: "Coctail", price: "40", sold: true},
+                6: {name: "First Steps", price: "40", sold: true},
+                7: {name: "Show", price: "40", sold: true},
+                8: {name: "Morning", price: "40", sold: true}
+              }
+            }
+  },
+  computed: {
+    total_paintings: function() {
+      return Object.keys(this.paintings).length
+    }
+  }
+});
+
+Vue.component('painting', {
+  props: ['url', 'name', 'price', 'sold', 'id', 'saleprice', 'size'],
+  template: `
+  <div class="col-sm-6 col-md-4 p-2 pb-4">
+    <div class="col">
+      #{{id}}: {{name}}, <span class="text-muted small">canvas 25x30, acrylic eco paint</span>
+    </div>
+    <a target="_blank" class="lightbox" :href="url">
+      <img class="img-fluid img-thumbnail" :src="url" alt="">
+    </a>
+
+    <div class="col text-right p-2 ">
+      {{price}}$
+      <a v-if="!sold" href="" class="btn btn-success btn-xs">Buy</a>
+      <span v-if="!sold" class="text-muted small">
+        <br>
+        <i class="">priority mail</i>
+      </span>
+      <spam v-if="sold" class="text-success">SOLD!</span>
+    </div>
+  </div>
+  `
+});
+
 
 Vue.component('work', {
   props: ['url'],
