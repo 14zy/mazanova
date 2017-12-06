@@ -1,20 +1,20 @@
 Vue.component('paintings-list', {
   template: `
   <div class="row p-4">
-    <painting v-for="image in total_paintings" :id="image" :name="paintings[image].name" :price="paintings[image].price" :sold="paintings[image].sold" :url="'images/la-vie-en-rose/'+image+'.jpg'"></painting>
+    <painting v-for="image in total_paintings" :id="image" :name="paintings[image].name" :price="paintings[image].price" :sold="paintings[image].sold" :saleprice="paintings[image].saleprice" :url="'images/la-vie-en-rose/'+image+'.jpg'"></painting>
   </div>
   `,
   data: function () {
     return {
               paintings: {
-                1: {name: "Rose", price: "59", sold: true},
+                1: {name: "Rose", price: "59", sold: false, saleprice: "39"},
                 2: {name: "Letter", price: "59", sold: true},
-                3: {name: "Bath", price: "59", sold: true},
-                4: {name: "Water", price: "59", sold: true},
+                3: {name: "Bath", price: "59", sold: false, saleprice: "39"},
+                4: {name: "Water", price: "59", sold: false, saleprice: "39"},
                 5: {name: "Coctail", price: "59", sold: true},
-                6: {name: "First Steps", price: "59", sold: true},
-                7: {name: "Show", price: "59", sold: true},
-                8: {name: "Morning", price: "59", sold: true}
+                6: {name: "First Steps", price: "59", sold: false, saleprice: "39"},
+                7: {name: "Show", price: "59", sold: false, saleprice: "39"},
+                8: {name: "Morning", price: "59", sold: false, saleprice: "39"}
               }
             }
   },
@@ -37,13 +37,23 @@ Vue.component('painting', {
     </a>
 
     <div class="col text-right p-2 ">
-      {{price}}$
-      <a v-if="!sold" href="" class="btn btn-success btn-xs">Buy</a>
-      <span v-if="!sold" class="text-muted small">
-        <br>
-        <i class="">priority mail</i>
+      <span v-if="saleprice">
+        <strike class="text-danger">{{price}}$</strike> {{saleprice}}$
       </span>
-      <spam v-if="sold" class="text-success">SOLD!</span>
+      <span v-else>
+        {{price}}$
+      </span>
+
+      <span v-if="sold">
+        SOLD!
+      </span>
+      <span v-else>
+        <a target="_blank" :href="'https://www.paypal.me/artchallenge/'+saleprice+'usd'" class="btn btn-success btn-xs">Buy</a>
+        <span class="text-muted small">
+        <br>
+        <i class="">PayPal checkout</i>
+        <span>
+      </span>
     </div>
   </div>
   `
